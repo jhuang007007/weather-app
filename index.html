@@ -6,20 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather app</title>
   <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
-  <div>
+  <div class="main-content">
+    <img src="" alt="" class="sky-image">
     <p class="sky"></p>
     <p class="city"></p>
     <p class="country"></p>
+    <form id="location-form">
+      <input type="search" id="location" placeholder="Search Location...">
+    </form>
     <p class="temp"></p>
     <p class="temp-feels-like"></p>
     <p class="wind"></p>
     <p class="humidity"></p>
   </div>
-  <form id="location-form">
-    <input type="text" id="location" placeholder="Search your location">
-  </form>
+  
+  <p id="credits">Photo by <a href="https://unsplash.com/@v2osk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">v2osk</a> on <a href="https://unsplash.com/s/photos/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </p>
 </body>
 </html>

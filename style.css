@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background: url("img/v2osk-1Z2niiBPg5A-unsplash.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30vh;
+  align-items: center;
+}
+
+img {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.sky-image {
+  margin-bottom: -20px;
+}
+
+.city {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#location-form {
+  margin: 10px 0 10px 0;
+}
+
+.temp, .temp-feels-like, .wind {
+  margin-bottom: 5px;
+}
+
+.temp {
+  font-size: 36px;
+}
+
+#credits {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#credits > a {
+  color: white;
+}
