@@ -1,4 +1,4 @@
-let API_KEY = '44b6df905c1664b3157f43e6ed769554';
+const API_KEY = '44b6df905c1664b3157f43e6ed769554';
 const sky = document.querySelector('.sky');
 const skyImage = document.querySelector('.sky-image')
 const city = document.querySelector('.city');
@@ -12,7 +12,7 @@ const locationInput = document.querySelector('#location');
 
 async function getWeather(userLocation) {
   try {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${userLocation}&appid=${API_KEY}`, {mode: 'cors'});
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userLocation}&appid=${API_KEY}`, {mode: 'cors'});
     const weatherData = await response.json();
     const processedWeatherData = await processJSON(weatherData);
     return processedWeatherData;
@@ -52,7 +52,7 @@ function renderWeatherDataToDOM(weatherData) {
   }
   locationInput.value = '';
   sky.textContent = weatherData.sky;
-  skyImage.src = `http://openweathermap.org/img/wn/${weatherData.skyImage}@2x.png`;
+  skyImage.src = `https://openweathermap.org/img/wn/${weatherData.skyImage}@2x.png`;
   country.textContent = weatherData.country;
   city.textContent = weatherData.city;
   temp.textContent = temperature;
